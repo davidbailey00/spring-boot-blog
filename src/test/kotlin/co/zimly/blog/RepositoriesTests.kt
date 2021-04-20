@@ -18,8 +18,11 @@ class RepositoriesTests @Autowired constructor(
 	fun `When findByIdOrNull then return Article`() {
 		val user = User("davidbailey", "David", "Bailey")
 		val article = Article(
-			"The Day I Caught The Train", "I never saw it as the start",
-			"Insert the rest of the lyrics", user)
+			title = "The Day I Caught The Train",
+			headline = "I never saw it as the start",
+			content = "Insert the rest of the lyrics",
+			author = user,
+		)
 		entityManager.persist(user)
 		entityManager.persist(article)
 		entityManager.flush()
