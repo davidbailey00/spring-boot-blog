@@ -12,18 +12,18 @@ class BlogConfiguration {
 		userRepository: UserRepository,
 		articleRepository: ArticleRepository,
 	) = ApplicationRunner {
-		val smaldini = userRepository.save(User("smaldini", "Stéphane", "Maldini"))
+		val user = userRepository.save(User("smaldini", "Stéphane", "Maldini"))
 		articleRepository.save(Article(
 			title = "Reactor Bismuth is out",
 			headline = "Lorem ipsum",
 			content = "dolor sit amet",
-			author = smaldini
+			author = user
 		))
 		articleRepository.save(Article(
 			title = "Reactor Aluminium has landed",
 			headline = "Lorem ipsum",
 			content = "dolor sit amet",
-			author = smaldini
+			author = user
 		))
 	}
 }
