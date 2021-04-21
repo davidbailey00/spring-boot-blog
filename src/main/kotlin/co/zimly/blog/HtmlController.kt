@@ -24,6 +24,7 @@ class HtmlController(private val repository: ArticleRepository) {
 			.findBySlug(slug)
 			?.render()
 			?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "This article does not exist")
+		model["title"] = article.title
 		model["article"] = article
 		return "article"
 	}
