@@ -6,7 +6,7 @@ plugins {
 	kotlin("jvm") version "1.5.10"
 	kotlin("plugin.spring") version "1.5.10"
 	kotlin("plugin.jpa") version "1.5.10"
-	kotlin("plugin.allopen") version "1.5.10"
+	kotlin("plugin.allopen") version "1.5.20"
 }
 
 allOpen {
